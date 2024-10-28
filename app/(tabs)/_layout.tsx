@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import LoginScreen from './login.tsx';
+import LoginScreen from '../login.tsx';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -52,6 +52,24 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+            name="game"
+            options={{
+              title: 'Game',
+              tabBarIcon: ({ color, focused }) => (
+                <TabBarIcon name={focused ? 'play' : 'play-outline'} color={color} />
+              ),
+            }}
+          />
+      <Tabs.Screen
+             name="logout"
+             options={{
+             title: 'Logout',
+             tabBarIcon: ({ color, focused }) => (
+               <TabBarIcon name={focused ? 'exit-sharp' : 'exit-sharp'} color={color} />
+               ),
+            }}
+           />
     </Tabs>
     ) : (
     <LoginScreen onLogin={handleLoginSuccess} />

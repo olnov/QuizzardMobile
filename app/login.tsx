@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { View, Text, TextInput, Button, StyleSheet, Alert, Image } from 'react-native';
-import { login } from '../../services/UserService.js';
+import { login } from '../services/UserService.js';
 
 
 const LoginScreen = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const dataChecker = async ()=> {
+    const tokenCheck = await AsyncStorage.getItem('token');
+    const userIdCheck = await AsyncStorage.getItem('userId');
+    console.log("Current token: ", tokenCheck);
+    console.log("User id: ", userIdCheck);
+  }
+
+  useEffect (()=>{
+      dataChecker();
+      },[])
+
+
 
   const handleLogin = async () => {
     // Basic validation

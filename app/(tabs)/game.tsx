@@ -3,6 +3,7 @@ import { View, Text, Button, TouchableOpacity, StyleSheet, FlatList, Alert } fro
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { router } from 'expo-router';
 import { saveScores } from '../../services/ScoreService';
+import { decode } from "html-entities";
 
 const GameScreen = () => {
   const [error, setError] = useState(null);
@@ -23,6 +24,11 @@ const GameScreen = () => {
       setShuffledAnswers(shuffleAnswers(currentQuestion.correct_answer, currentQuestion.incorrect_answers));
     }
   }, [currentQuestionIndex, questions]);
+
+  const handlePlayAgain = ()=> {
+      setQuestions([]);
+      router.push('/');
+      }
 
   const shuffleAnswers = (correctAnswer, incorrectAnswers) => {
     const allAnswers = [...incorrectAnswers, correctAnswer];
@@ -147,7 +153,7 @@ const GameScreen = () => {
         <Text>Correct Answers: {correctCount}</Text>
         <Text>Total Time Taken: {45 - time} seconds</Text>
         <Text style={styles.score}>Score: {finalScore}</Text>
-        <Button title="Play Again" onPress={() => router.push('/')} />
+        <Button title="Play Again" onPress={handlePlayAgain} />
       </View>
     );
   }
@@ -157,7 +163,7 @@ const GameScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.questionCounter}>Question {currentQuestionIndex + 1} of {questions.length}:</Text>
-      <Text style={styles.questionText}>{currentQuestion.question}</Text>
+      <Text style={styles.questionText}>{decode(currentQuestion.question, { level: "html5" })}</Text>
       <FlatList
         data={shuffledAnswers}
         keyExtractor={(item, index) => index.toString()}
