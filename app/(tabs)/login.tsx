@@ -17,6 +17,7 @@ const LoginScreen = ({ onLogin }) => {
     try {
         const data = await login(email, password);
         await AsyncStorage.setItem('token', data.token);
+        await AsyncStorage.setItem('userId', data.userId);
         onLogin();
         }catch(error){
             console.error("Error: ", error);
