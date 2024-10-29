@@ -2,7 +2,7 @@
 
 This is a mobile version of the Quizzard game based on Open Trivia API (https://github.com/olnov/trivia) written in React Native using the Expo framework. 
 
-![](https://github.com/olnov/QuizzardMobile/blob/main/docs/video/Screen_Recording_QuizzardMobile.mp4)
+![](docs/images/01.jpg)
 
 
 If you'd like to try your local instance, please look at the installation steps described here - https://github.com/olnov/trivia, and follow the steps in this README.
