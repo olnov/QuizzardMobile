@@ -2,7 +2,7 @@
 
 This is a mobile version of the Quizzard game based on Open Trivia API (https://github.com/olnov/trivia) written in React Native using the Expo framework. 
 
-|<img src="docs/images/01.jpg" alt="Slpash screen" width="150">|<img src="docs/images/02.jpg" alt="Login screen" width="150">|<img src="docs/images/03.jpg" alt="Game screen" width="150">|<img src="docs/images/04.jpg" alt="Scores screen" width="150">|<img src="docs/images/05.jpg" alt="" width="150">|
+<img src="docs/images/01.jpg" alt="Slpash screen" width="150"> <img src="docs/images/02.jpg" alt="Login screen" width="150"> <img src="docs/images/03.jpg" alt="Game screen" width="150"> <img src="docs/images/04.jpg" alt="Scores screen" width="150"> <img src="docs/images/05.jpg" alt="" width="150">
 
 
 If you'd like to try your local instance, please look at the installation steps described here - https://github.com/olnov/trivia, and follow the steps in this README.
@@ -14,28 +14,12 @@ If you'd like to try your local instance, please look at the installation steps 
    ```bash
    npm install
    ```
-
-2. Start the app
+2. Add your backend url to the .env file. Example:
+   ```yaml
+   EXPO_PUBLIC_BACKEND_URL='http://192.168.1.10:8080'
+   ```  
+3. Start the app
 
    ```bash
     npx expo start
    ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
