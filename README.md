@@ -1,8 +1,13 @@
-# Welcome to your Expo app 👋
+# Quizzard Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a mobile version of the Quizzard game based on Open Trivia API (https://github.com/olnov/trivia) written in React Native using the Expo framework. 
 
-## Get started
+![](https://github.com/olnov/QuizzardMobile/blob/main/docs/video/Screen_Recording_QuizzardMobile.mp4)
+
+
+If you'd like to try your local instance, please look at the installation steps described here - https://github.com/olnov/trivia, and follow the steps in this README.
+
+## Get started 
 
 1. Install dependencies
 
@@ -34,17 +39,3 @@ npm run reset-project
 ```
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
