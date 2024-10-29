@@ -2,7 +2,7 @@
 
 This is a mobile version of the Quizzard game based on Open Trivia API (https://github.com/olnov/trivia) written in React Native using the Expo framework. 
 
-![](docs/images/01.jpg)
+<img src="docs/images/01.jpg" alt="Slpash screen" width="50">
 
 
 If you'd like to try your local instance, please look at the installation steps described here - https://github.com/olnov/trivia, and follow the steps in this README.
